@@ -2,11 +2,17 @@
 Creation of a database for a fitness app using Oracle SQL Developer.
 
 Each user is identified by a UUID, a registration date, a service type (free or premium) and an activity label whose value changes when the user is online or offline.
+
 Each user has a profile with their own physical characteristics, such as their weight, height, birth date, etc.
+
 Each user also has several daily objectives, including the number of steps, burned calories, etc. 
+
 The database has different types of exercises, such as running, walking, cycling and more, which affect different aspects, including the number of steps, calories, total distance, etc.
+
 The exercises done by users are saved with their duration and respective variable values related to the exercise.
+
 Each user can retrieve the data related with daily activity, including the date, steps, calories, weight and distance of each day. 
+
 The payments of each user are also saved and identified with their UUID, date, value, etc. 
 
 The previous elements and respective relationships are depicted below:
