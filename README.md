@@ -10,7 +10,8 @@ Each user can retrieve the data related with daily activity, including the date,
 The payments of each user are also saved and identified with their UUID, date, value, etc. 
 
 The previous elements and respective relationships are depicted below:
-![DMM Model MDE Trab1](https://github.com/ro-afonso/oracle-db-fitness-app/assets/93609933/30e7d000-c2f7-4e5c-a891-0ffe7e676646)
+![DMM Model MDE Trab1](https://github.com/ro-afonso/oracle-db-fitness-app/assets/93609933/d660b371-e7d2-46bf-b562-3901e9b945dc)
+
 
 The database comprises the following functional requirements and procedures:
 1) CRUD operations for users, profiles, daily objectives and exercise types
