@@ -1,6 +1,6 @@
-/*drop table alimentaÁ„o;
-drop table exercÌcio;
-drop table notificaÁıes;
+/*drop table alimenta√ß√£o;
+drop table exerc√≠cio;
+drop table notifica√ß√µes;
 drop table objetivos_dia;
 drop table pagamentos;
 drop table perfil;
@@ -19,35 +19,35 @@ drop type row_utilizador;
 drop type row_valores_dia;
 drop type row_view;*/
 
---inÌcio do modeler
-CREATE TABLE exercÌcio (
+--in√≠cio do modeler
+CREATE TABLE exerc√≠cio (
     id_exe                INTEGER NOT NULL,
     nome                  VARCHAR2(64),
     data                  DATE,
     nr_de_passos          INTEGER,
-    dist‚ncia_percorrida  INTEGER,
+    dist√¢ncia_percorrida  INTEGER,
     calorias_perdidas     INTEGER,
-    ritmo_cardÌaco        INTEGER,
-    inÌcio                VARCHAR2(8),
+    ritmo_card√≠aco        INTEGER,
+    in√≠cio                VARCHAR2(8),
     fim                   VARCHAR2(8),
     utilizador_id         INTEGER NOT NULL
 );
 
-ALTER TABLE exercÌcio ADD CONSTRAINT exercÌcio_pk PRIMARY KEY ( id_exe );
+ALTER TABLE exerc√≠cio ADD CONSTRAINT exerc√≠cio_pk PRIMARY KEY ( id_exe );
 
-CREATE TABLE notificaÁıes (
-    id_notificaÁ„o  INTEGER NOT NULL,
+CREATE TABLE notifica√ß√µes (
+    id_notifica√ß√£o  INTEGER NOT NULL,
     data            DATE,
-    ritmo_cardÌaco  INTEGER,
+    ritmo_card√≠aco  INTEGER,
     utilizador_id   INTEGER NOT NULL
 );
 
-ALTER TABLE notificaÁıes ADD CONSTRAINT notificaÁıes_pk PRIMARY KEY ( id_notificaÁ„o );
+ALTER TABLE notifica√ß√µes ADD CONSTRAINT notifica√ß√µes_pk PRIMARY KEY ( id_notifica√ß√£o );
 
 CREATE TABLE objetivos_dia (
     data                    DATE NOT NULL,
-    n˙mero_de_passos_a_dar  INTEGER,
-    dist‚ncia_a_percorrer   INTEGER,
+    n√∫mero_de_passos_a_dar  INTEGER,
+    dist√¢ncia_a_percorrer   INTEGER,
     calorias_a_queimar      INTEGER,
     utilizador_id           INTEGER NOT NULL
 );
@@ -74,9 +74,9 @@ ALTER TABLE perfil ADD CONSTRAINT perfil_pk PRIMARY KEY ( id_perfil );
 CREATE TABLE utilizador (
     id                 INTEGER NOT NULL,
     primeiro_nome      VARCHAR2(64) NOT NULL,
-    ˙ltimo_nome        VARCHAR2(64) NOT NULL,
-    data_de_inscriÁ„o  DATE,
-    tipo_de_serviÁo    VARCHAR2(64),
+    √∫ltimo_nome        VARCHAR2(64) NOT NULL,
+    data_de_inscri√ß√£o  DATE,
+    tipo_de_servi√ßo    VARCHAR2(64),
     ativo              INTEGER,
     data_de_ativacao   DATE,
     data_de_expiracao  DATE 
@@ -87,24 +87,24 @@ ALTER TABLE utilizador ADD CONSTRAINT utilizador_pk PRIMARY KEY ( id );
 CREATE TABLE valores_dia (
     data                  DATE NOT NULL,
     nr_passos             INTEGER,
-    dist‚ncia_percorrida  INTEGER,
+    dist√¢ncia_percorrida  INTEGER,
     calorias_perdidas     INTEGER,
     utilizador_id         INTEGER NOT NULL
 );
 
-CREATE TABLE alimentaÁ„o (
+CREATE TABLE alimenta√ß√£o (
     alimento  VARCHAR2(64) NOT NULL,
     calorias  INTEGER
 );
 
-ALTER TABLE alimentaÁ„o ADD CONSTRAINT alimentaÁ„o_pk PRIMARY KEY ( alimento );
+ALTER TABLE alimenta√ß√£o ADD CONSTRAINT alimenta√ß√£o_pk PRIMARY KEY ( alimento );
 
-ALTER TABLE exercÌcio
-    ADD CONSTRAINT exercÌcio_utilizador_fk FOREIGN KEY ( utilizador_id )
+ALTER TABLE exerc√≠cio
+    ADD CONSTRAINT exerc√≠cio_utilizador_fk FOREIGN KEY ( utilizador_id )
         REFERENCES utilizador ( id );
 
-ALTER TABLE notificaÁıes
-    ADD CONSTRAINT notificaÁıes_utilizador_fk FOREIGN KEY ( utilizador_id )
+ALTER TABLE notifica√ß√µes
+    ADD CONSTRAINT notifica√ß√µes_utilizador_fk FOREIGN KEY ( utilizador_id )
         REFERENCES utilizador ( id );
 
 ALTER TABLE objetivos_dia
@@ -142,25 +142,25 @@ SELECT to_char(SYSDATE, 'HH24:MI:SS') FROM dual;
 
 select * from tempotemporario;*/
 
---atualizar tempo de inÌcio do exercÌcio com id=1
+--atualizar tempo de in√≠cio do exerc√≠cio com id=1
 /*
-describe mediÁ„o;
-insert into mediÁ„o (ID_MEDI«√O, EXERCÕCIO_ID_EXE) values (2,1); --criar row e depois os updates completam a row
+describe medi√ß√£o;
+insert into medi√ß√£o (ID_MEDI√á√ÉO, EXERC√çCIO_ID_EXE) values (2,1); --criar row e depois os updates completam a row
 
-UPDATE mediÁ„o  --adicionar tempo como antes
+UPDATE medi√ß√£o  --adicionar tempo como antes
    SET (Tempo) = (SELECT to_char(SYSDATE, 'HH24:MI:SS') FROM dual
-                        WHERE ID_MEDI«√O = 2)
+                        WHERE ID_MEDI√á√ÉO = 2)
                         
     WHERE EXISTS (
     SELECT 1
       FROM dual
-     WHERE ID_MEDI«√O = 2);    
+     WHERE ID_MEDI√á√ÉO = 2);    
      
-select * from mediÁ„o;
+select * from medi√ß√£o;
      
-update mediÁ„o --adicionar data, ritmo card e hidrataÁ„o 
-   set DATA = to_date(sysdate), RITMO_CARDÕACO = 60, HIDRATA«√O = 50
-   where ID_MEDI«√O = 2;*/
+update medi√ß√£o --adicionar data, ritmo card e hidrata√ß√£o 
+   set DATA = to_date(sysdate), RITMO_CARD√çACO = 60, HIDRATA√á√ÉO = 50
+   where ID_MEDI√á√ÉO = 2;*/
      
 /*create or replace NONEDITIONABLE PROCEDURE print_contact(in_customer_id NUMBER )
 is
@@ -182,13 +182,13 @@ BEFORE UPDATE OF PRIMEIRO_NOME
 ON utilizador 
 FOR EACH ROW WHEN (NEW.PRIMEIRO_NOME = 'Jaime') 
 BEGIN 
-   raise_application_error(-20101,'… o jaime, n„o ser· adicionado');
+   raise_application_error(-20101,'√â o jaime, n√£o ser√° adicionado');
 END;
 /*/
 
 /*create or replace trigger data_valores_dia_trig
 --before update on valores_dia
-after insert on exercÌcio
+after insert on exerc√≠cio
 for each row
 begin
     insert into valores_dia (DATA, UTILIZADOR_ID) values (sysdate, 1);
@@ -196,15 +196,15 @@ end;
 /*/
 
 create or replace trigger notificacao_trig
-after insert on exercÌcio
-for each row WHEN (NEW.RITMO_CARDÕACO < 50 or NEW.RITMO_CARDÕACO > 90) --aqui
+after insert on exerc√≠cio
+for each row WHEN (NEW.RITMO_CARD√çACO < 50 or NEW.RITMO_CARD√çACO > 90) --aqui
 declare teste integer;
 begin
     --select id into notif_id_exe from dual;
-    --insert into notificaÁıes (data, utilizador_id) select (
+    --insert into notifica√ß√µes (data, utilizador_id) select (
     teste:= get_idade(:NEW.UTILIZADOR_ID);
-    if(:NEW.RITMO_CARDÕACO < 50 - teste or :NEW.RITMO_CARDÕACO > 90 + teste) then
-    insert into notificaÁıes (ID_NOTIFICA«√O, data, ritmo_cardÌaco, UTILIZADOR_ID) values ((SELECT COUNT(*) "ID_NOTIFICA«√O" FROM notificaÁıes ) + 1, to_char(SYSDATE, 'yyyy/mm/dd'), :NEW.RITMO_CARDÕACO, :NEW.UTILIZADOR_ID);
+    if(:NEW.RITMO_CARD√çACO < 50 - teste or :NEW.RITMO_CARD√çACO > 90 + teste) then
+    insert into notifica√ß√µes (ID_NOTIFICA√á√ÉO, data, ritmo_card√≠aco, UTILIZADOR_ID) values ((SELECT COUNT(*) "ID_NOTIFICA√á√ÉO" FROM notifica√ß√µes ) + 1, to_char(SYSDATE, 'yyyy/mm/dd'), :NEW.RITMO_CARD√çACO, :NEW.UTILIZADOR_ID);
     
     end if;
 end;
@@ -225,9 +225,9 @@ end;
 create or replace NONEDITIONABLE PROCEDURE CREATE_USER(nome_primeiro VARCHAR, nome_ultimo VARCHAR, serivico_tipo VARCHAR, ativado_num integer, peso_valor integer, altura_valor integer, data_de_nascimento_valor date)
 is
 BEGIN
-insert into utilizador (ID, PRIMEIRO_NOME, ⁄LTIMO_NOME, DATA_DE_INSCRI«√O, TIPO_DE_SERVI«O, ATIVO, data_de_ativacao) values ((SELECT COUNT(*) "ID" FROM utilizador ) + 1, nome_primeiro, nome_ultimo, SYSDATE ,serivico_tipo, ativado_num, to_char(SYSDATE, 'yyyy/mm/dd'));
+insert into utilizador (ID, PRIMEIRO_NOME, √öLTIMO_NOME, DATA_DE_INSCRI√á√ÉO, TIPO_DE_SERVI√áO, ATIVO, data_de_ativacao) values ((SELECT COUNT(*) "ID" FROM utilizador ) + 1, nome_primeiro, nome_ultimo, SYSDATE ,serivico_tipo, ativado_num, to_char(SYSDATE, 'yyyy/mm/dd'));
 insert into perfil(ID_PERFIL, PESO, ALTURA, DATA_DE_NASCIMENTO, UTILIZADOR_ID) values ((SELECT COUNT(*) "ID" FROM perfil) + 1, peso_valor, altura_valor, data_de_nascimento_valor, (SELECT COUNT(*) "ID" FROM utilizador));
-insert into objetivos_dia (DATA, N⁄MERO_DE_PASSOS_A_DAR, DIST¬NCIA_A_PERCORRER, CALORIAS_A_QUEIMAR, UTILIZADOR_ID) values (to_char(SYSDATE, 'yyyy/mm/dd'), (dbms_random.value(1, 5)) * 1000, dbms_random.value(1, 5), (dbms_random.value(3, 1)) * 1000, (SELECT COUNT(*) "ID" FROM utilizador)); 
+insert into objetivos_dia (DATA, N√öMERO_DE_PASSOS_A_DAR, DIST√ÇNCIA_A_PERCORRER, CALORIAS_A_QUEIMAR, UTILIZADOR_ID) values (to_char(SYSDATE, 'yyyy/mm/dd'), (dbms_random.value(1, 5)) * 1000, dbms_random.value(1, 5), (dbms_random.value(3, 1)) * 1000, (SELECT COUNT(*) "ID" FROM utilizador)); 
 END;
 /
 
@@ -246,8 +246,8 @@ select case when exists(select CALORIAS_A_QUEIMAR from objetivos_dia where UTILI
 
 update objetivos_dia
     set
-        N⁄MERO_DE_PASSOS_A_DAR = (dbms_random.value(1, 5))*1000,
-        DIST¬NCIA_A_PERCORRER = dbms_random.value(1, 5),
+        N√öMERO_DE_PASSOS_A_DAR = (dbms_random.value(1, 5))*1000,
+        DIST√ÇNCIA_A_PERCORRER = dbms_random.value(1, 5),
         CALORIAS_A_QUEIMAR = (dbms_random.value(3, 1))*1000
     where data = to_char(SYSDATE, 'yyyy/mm/dd') and UTILIZADOR_ID = daily_user_id;
 end;
@@ -268,12 +268,12 @@ create or replace NONEDITIONABLE PROCEDURE CHANGE_USER_SERVICE(check_id INTEGER,
 is
 tipo_atual varchar2(64);
 BEGIN
-select utilizador.tipo_de_serviÁo into tipo_atual from utilizador where utilizador.id = check_id;
+select utilizador.tipo_de_servi√ßo into tipo_atual from utilizador where utilizador.id = check_id;
 if service_type = 0 then
-update utilizador  set tipo_de_serviÁo = 'free' where id = check_id;
+update utilizador  set tipo_de_servi√ßo = 'free' where id = check_id;
 end if;
 if service_type = 1 then
-update utilizador  set tipo_de_serviÁo = 'premium' where id = check_id;
+update utilizador  set tipo_de_servi√ßo = 'premium' where id = check_id;
 end if;
 END;
 /
@@ -282,9 +282,9 @@ CREATE OR REPLACE TYPE row_utilizador IS OBJECT
 (
     id                 INTEGER,
     primeiro_nome      VARCHAR2(64),
-    ˙ltimo_nome        VARCHAR2(64),
-    data_de_inscriÁ„o  DATE,
-    tipo_de_serviÁo    VARCHAR2(64),
+    √∫ltimo_nome        VARCHAR2(64),
+    data_de_inscri√ß√£o  DATE,
+    tipo_de_servi√ßo    VARCHAR2(64),
     ativo              INTEGER,
     data_de_ativacao   date,
     data_de_expiracao   date
@@ -299,9 +299,9 @@ BEGIN
 user_new := row_utilizador(0, 'primeiro', 'segundo', to_date('2017/11/02', 'yyyy/mm/dd'), 'free', 0, to_date('2017/11/02', 'yyyy/mm/dd'), to_date('2017/11/02', 'yyyy/mm/dd'));
 select id into user_new.id from utilizador where utilizador.id = get_id;
 select primeiro_nome into user_new.primeiro_nome from utilizador where utilizador.id = get_id;
-select ˙ltimo_nome into user_new.˙ltimo_nome from utilizador where utilizador.id = get_id;
-select data_de_inscriÁ„o into user_new.data_de_inscriÁ„o from utilizador where utilizador.id = get_id;
-select tipo_de_serviÁo into user_new.tipo_de_serviÁo from utilizador where utilizador.id = get_id;
+select √∫ltimo_nome into user_new.√∫ltimo_nome from utilizador where utilizador.id = get_id;
+select data_de_inscri√ß√£o into user_new.data_de_inscri√ß√£o from utilizador where utilizador.id = get_id;
+select tipo_de_servi√ßo into user_new.tipo_de_servi√ßo from utilizador where utilizador.id = get_id;
 select ativo into user_new.ativo from utilizador where utilizador.id = get_id;
 select data_de_ativacao into user_new.data_de_ativacao from utilizador where utilizador.id = get_id;
 select data_de_expiracao into user_new.data_de_expiracao from utilizador where utilizador.id = get_id;
@@ -312,8 +312,8 @@ END ;
 CREATE OR REPLACE TYPE row_obj_dia IS OBJECT
 (
     datas                   DATE,
-    n˙mero_de_passos_a_dar  INTEGER,
-    dist‚ncia_a_percorrer   INTEGER,
+    n√∫mero_de_passos_a_dar  INTEGER,
+    dist√¢ncia_a_percorrer   INTEGER,
     calorias_a_queimar      INTEGER,
     utilizador_id           INTEGER
 );
@@ -326,8 +326,8 @@ obj_dia_new row_obj_dia;
 BEGIN
 obj_dia_new := row_obj_dia(to_date('2017/11/02', 'yyyy/mm/dd'), 0, 0, 0, 0);
 select data into obj_dia_new.datas from objetivos_dia where objetivos_dia.data = get_data;
-select n˙mero_de_passos_a_dar into obj_dia_new.n˙mero_de_passos_a_dar from objetivos_dia where objetivos_dia.data = get_data;
-select dist‚ncia_a_percorrer into obj_dia_new.dist‚ncia_a_percorrer from objetivos_dia where objetivos_dia.data = get_data;
+select n√∫mero_de_passos_a_dar into obj_dia_new.n√∫mero_de_passos_a_dar from objetivos_dia where objetivos_dia.data = get_data;
+select dist√¢ncia_a_percorrer into obj_dia_new.dist√¢ncia_a_percorrer from objetivos_dia where objetivos_dia.data = get_data;
 select calorias_a_queimar into obj_dia_new.calorias_a_queimar from objetivos_dia where objetivos_dia.data = get_data;
 select utilizador_id into obj_dia_new.utilizador_id from objetivos_dia where objetivos_dia.data = get_data;
 return(obj_dia_new);
@@ -363,7 +363,7 @@ CREATE OR REPLACE TYPE row_valores_dia IS OBJECT
 (
     data                  DATE,
     nr_passos             INTEGER,
-    dist‚ncia_percorrida  INTEGER,
+    dist√¢ncia_percorrida  INTEGER,
     calorias_perdidas     INTEGER,
     utilizador_id         INTEGER
 );
@@ -377,7 +377,7 @@ BEGIN
 valores_dia_new := row_valores_dia(to_date('2017/11/02', 'yyyy/mm/dd'), 0, 0, 0, 0);
 select data into valores_dia_new.data from valores_dia where valores_dia.utilizador_id = get_id and valores_dia.data = data_new;
 select nr_passos into valores_dia_new.nr_passos from valores_dia where valores_dia.utilizador_id = get_id and valores_dia.data = data_new;
-select dist‚ncia_percorrida into valores_dia_new.dist‚ncia_percorrida from valores_dia where valores_dia.utilizador_id = get_id and valores_dia.data = data_new;
+select dist√¢ncia_percorrida into valores_dia_new.dist√¢ncia_percorrida from valores_dia where valores_dia.utilizador_id = get_id and valores_dia.data = data_new;
 select calorias_perdidas into valores_dia_new.calorias_perdidas from valores_dia where valores_dia.utilizador_id = get_id and valores_dia.data = data_new;
 select utilizador_id into valores_dia_new.utilizador_id from valores_dia where valores_dia.utilizador_id = get_id and valores_dia.data = data_new;
 return(valores_dia_new);
@@ -397,7 +397,7 @@ create or replace NONEDITIONABLE PROCEDURE send_PAGAMENTO(get_id integer)
 is
 temp varchar2(64);
 BEGIN
-select tipo_de_serviÁo into temp from utilizador where id = get_id;
+select tipo_de_servi√ßo into temp from utilizador where id = get_id;
 if temp = 'free' then
 insert into pagamentos (ID_pagamento, DATA_DE_PAGAMENTO, VALOR, UTILIZADOR_ID) values ((SELECT COUNT(*) "ID" FROM pagamentos ) + 1, to_char(SYSDATE, 'yyyy/mm/dd'), 1, get_id);
 end if;
@@ -425,28 +425,28 @@ else
 temp := calorias_perdidas_new;
 end if;
 
-insert into EXERCÕCIO (ID_EXE, NOME, DATA, NR_DE_PASSOS, DIST¬NCIA_PERCORRIDA, CALORIAS_PERDIDAS, RITMO_CARDÕACO, UTILIZADOR_ID) values ((SELECT COUNT(*) "ID" FROM EXERCÕCIO )+1, nome_new, to_char(SYSDATE, 'yyyy/mm/dd'), nr_de_passos_new, distancia_percorrida_new,temp, bat_card_new, id_new);
-UPDATE exercÌcio
-   SET (InÌcio, Fim) = (SELECT to_char(SYSDATE, 'HH24:MI:SS'), (to_char(SYSDATE+ dbms_random.value(5, 30)*interval '1' minute, 'HH24:MI:SS'))  FROM dual
-                        WHERE ID_EXE = (SELECT COUNT(*) "ID" FROM EXERCÕCIO ))
+insert into EXERC√çCIO (ID_EXE, NOME, DATA, NR_DE_PASSOS, DIST√ÇNCIA_PERCORRIDA, CALORIAS_PERDIDAS, RITMO_CARD√çACO, UTILIZADOR_ID) values ((SELECT COUNT(*) "ID" FROM EXERC√çCIO )+1, nome_new, to_char(SYSDATE, 'yyyy/mm/dd'), nr_de_passos_new, distancia_percorrida_new,temp, bat_card_new, id_new);
+UPDATE exerc√≠cio
+   SET (In√≠cio, Fim) = (SELECT to_char(SYSDATE, 'HH24:MI:SS'), (to_char(SYSDATE+ dbms_random.value(5, 30)*interval '1' minute, 'HH24:MI:SS'))  FROM dual
+                        WHERE ID_EXE = (SELECT COUNT(*) "ID" FROM EXERC√çCIO ))
                         
     WHERE EXISTS (
     SELECT 1
       FROM dual
-     WHERE ID_EXE = (SELECT COUNT(*) "ID" FROM EXERCÕCIO )); 
+     WHERE ID_EXE = (SELECT COUNT(*) "ID" FROM EXERC√çCIO )); 
      
 select case when exists(select calorias_perdidas from valores_dia where utilizador_id = id_new and data = to_char(sysdate,'yyyy/mm/dd')) 
             then  1
             else 0
             end  into l_exst from dual;
-    if l_exst = 0 then insert into valores_dia (DATA, NR_PASSOS, DIST¬NCIA_PERCORRIDA, CALORIAS_PERDIDAS, UTILIZADOR_ID) values (to_char(sysdate,'yyyy/mm/dd'), 0, 0, 0, id_new);
+    if l_exst = 0 then insert into valores_dia (DATA, NR_PASSOS, DIST√ÇNCIA_PERCORRIDA, CALORIAS_PERDIDAS, UTILIZADOR_ID) values (to_char(sysdate,'yyyy/mm/dd'), 0, 0, 0, id_new);
     end if; 
     
 update valores_dia
 set
 NR_PASSOS = NR_PASSOS+ nr_de_passos_new,
 CALORIAS_PERDIDAS = CALORIAS_PERDIDAS + temp,
-DIST¬NCIA_PERCORRIDA = DIST¬NCIA_PERCORRIDA + distancia_percorrida_new
+DIST√ÇNCIA_PERCORRIDA = DIST√ÇNCIA_PERCORRIDA + distancia_percorrida_new
 where UTILIZADOR_ID = id_new and DATA = to_char(sysdate,'yyyy/mm/dd');
 
 update perfil
@@ -524,7 +524,7 @@ for counter in 1..(finishing_date - starting_date) loop
             tempe(counter2) := row_valores_dia(to_date('2017/11/02', 'yyyy/mm/dd'), 0, 0, 0, 0);
             select data into tempe(counter2).data from valores_dia where valores_dia.data = starting_date + counter * interval '1' day and utilizador_id = search_id;
             select nr_passos into tempe(counter2).nr_passos from valores_dia where valores_dia.data = starting_date + counter * interval '1' day  and utilizador_id = search_id;
-            select dist‚ncia_percorrida into tempe(counter2).dist‚ncia_percorrida from valores_dia where valores_dia.data = starting_date + counter * interval '1' day  and utilizador_id = search_id;
+            select dist√¢ncia_percorrida into tempe(counter2).dist√¢ncia_percorrida from valores_dia where valores_dia.data = starting_date + counter * interval '1' day  and utilizador_id = search_id;
             select calorias_perdidas into tempe(counter2).calorias_perdidas from valores_dia where valores_dia.data = starting_date + counter * interval '1' day  and utilizador_id = search_id;
             select utilizador_id into tempe(counter2).utilizador_id from valores_dia where valores_dia.data = starting_date + counter * interval '1' day  and utilizador_id = search_id;
             counter2 := counter2 + 1;
@@ -536,9 +536,9 @@ END;
 
 CREATE OR REPLACE TYPE row_notificacoes IS OBJECT
 (
-    id_notificaÁ„o  INTEGER,
+    id_notifica√ß√£o  INTEGER,
     data            DATE,
-    ritmo_cardÌaco  INTEGER,
+    ritmo_card√≠aco  INTEGER,
     utilizador_id   INTEGER
 );
 /
@@ -562,18 +562,18 @@ BEGIN
     counter2 := 1;
     counter3 := 1;
     for tempo in 1..7 loop
-    SELECT COUNT(*) into counter from notificaÁıes;
+    SELECT COUNT(*) into counter from notifica√ß√µes;
     for counter2 in 1..counter loop
-        select case when exists(select id_notificaÁ„o from notificaÁıes where notificaÁıes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notificaÁ„o = counter2 and utilizador_id = id_chosed) 
+        select case when exists(select id_notifica√ß√£o from notifica√ß√µes where notifica√ß√µes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notifica√ß√£o = counter2 and utilizador_id = id_chosed) 
                 then  1
                 else 0
                 end  into l_exst from dual;
         if l_exst = 1 then
             tempe(counter3) := row_notificacoes(counter3, to_date('2017/11/02', 'yyyy/mm/dd'), 0, 0);
-            select id_notificaÁ„o into tempe(counter3).id_notificaÁ„o from notificaÁıes where notificaÁıes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notificaÁ„o = counter2 and utilizador_id = id_chosed;
-            select data into tempe(counter3).data from notificaÁıes where notificaÁıes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notificaÁ„o = counter2 and utilizador_id = id_chosed;
-            select ritmo_cardÌaco into tempe(counter3).ritmo_cardÌaco from notificaÁıes where notificaÁıes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notificaÁ„o = counter2 and utilizador_id = id_chosed;
-            select utilizador_id into tempe(counter3).utilizador_id from notificaÁıes where notificaÁıes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notificaÁ„o = counter2 and utilizador_id = id_chosed;
+            select id_notifica√ß√£o into tempe(counter3).id_notifica√ß√£o from notifica√ß√µes where notifica√ß√µes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notifica√ß√£o = counter2 and utilizador_id = id_chosed;
+            select data into tempe(counter3).data from notifica√ß√µes where notifica√ß√µes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notifica√ß√£o = counter2 and utilizador_id = id_chosed;
+            select ritmo_card√≠aco into tempe(counter3).ritmo_card√≠aco from notifica√ß√µes where notifica√ß√µes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notifica√ß√£o = counter2 and utilizador_id = id_chosed;
+            select utilizador_id into tempe(counter3).utilizador_id from notifica√ß√µes where notifica√ß√µes.data = to_char(SYSDATE - (tempo - 1) * interval '1' day, 'yyyy/mm/dd') and id_notifica√ß√£o = counter2 and utilizador_id = id_chosed;
             counter3 := counter3 + 1;
         end if;
     end loop;
@@ -677,9 +677,9 @@ BEGIN
             tempe(counter3) := row_view(counter3, 'primeiro', 'segundo', to_date('2017/11/02', 'yyyy/mm/dd'), 0, 0, to_date('2017/11/02', 'yyyy/mm/dd'), to_date('2017/11/02', 'yyyy/mm/dd'), 0);
             select id into tempe(counter3).id from utilizador where utilizador.ativo = 0 and id = counter2;
             select primeiro_nome into tempe(counter3).primeiro_nome from utilizador where utilizador.ativo = 0 and id = counter2;
-            select ˙ltimo_nome into tempe(counter3).ultimo_nome from utilizador where utilizador.ativo = 0 and id = counter2;
-            select data_de_inscriÁ„o into tempe(counter3).data_de_inscricao from utilizador where utilizador.ativo = 0 and id = counter2;
-            select tipo_de_serviÁo into tempe(counter3).tipo_de_servico from utilizador where utilizador.ativo = 0 and id = counter2;
+            select √∫ltimo_nome into tempe(counter3).ultimo_nome from utilizador where utilizador.ativo = 0 and id = counter2;
+            select data_de_inscri√ß√£o into tempe(counter3).data_de_inscricao from utilizador where utilizador.ativo = 0 and id = counter2;
+            select tipo_de_servi√ßo into tempe(counter3).tipo_de_servico from utilizador where utilizador.ativo = 0 and id = counter2;
             select ativo into tempe(counter3).ativo from utilizador where utilizador.ativo = 0 and id = counter2;
             select data_de_ativacao into tempe(counter3).data_de_ativacao from utilizador where utilizador.ativo = 0 and id = counter2;
             select data_de_expiracao into tempe(counter3).data_de_expiracao from utilizador where utilizador.ativo = 0 and id = counter2;
@@ -697,17 +697,17 @@ create or replace NONEDITIONABLE PROCEDURE comer(comida varchar, id_chose intege
 is
 temp integer;
 BEGIN
-select calorias into temp from alimentaÁ„o where alimento = comida;
+select calorias into temp from alimenta√ß√£o where alimento = comida;
 update perfil
 set
 peso = peso + temp where utilizador_id = id_chose;
 END;
 /
 
-insert into alimentaÁ„o (alimento, calorias) values ('hamburguer',100);
-insert into alimentaÁ„o (alimento, calorias) values ('salada',50);
-insert into alimentaÁ„o (alimento, calorias) values ('sumo',10);
-insert into alimentaÁ„o (alimento, calorias) values ('·gua',5);
+insert into alimenta√ß√£o (alimento, calorias) values ('hamburguer',100);
+insert into alimenta√ß√£o (alimento, calorias) values ('salada',50);
+insert into alimenta√ß√£o (alimento, calorias) values ('sumo',10);
+insert into alimenta√ß√£o (alimento, calorias) values ('√°gua',5);
 
 /*
 call CREATE_USER('tomas', 'limpinho', 'free', 0, 80000, 180,to_char(SYSDATE, 'yyyy/mm/dd'));
@@ -718,13 +718,13 @@ select * from objetivos_dia;
 
 call exercicio_done(3, 2); --names_type('caminhada', 'bicicleta', 'corrida');
 
-select * from exercÌcio;
+select * from exerc√≠cio;
 select * from valores_dia;
 
 select ver_valores_diarios(to_char(SYSDATE - interval '9' day, 'yyyy/mm/dd'), to_char(SYSDATE + interval '9' day, 'yyyy/mm/dd'), 2) from dual;
 
 select ver_notificacoes_semana(2) from dual;
-select * from notificaÁıes;
+select * from notifica√ß√µes;
 
 call pagar(1);
 select * from utilizador;
@@ -735,7 +735,7 @@ select ver_utilizadores_nao_ativos from dual;
 call ativar_desativar(1, 0);
 select * from utilizador;
 
-select * from alimentaÁ„o;
-select sum(calorias) from alimentaÁ„o; --comer do dia
-call comer('·gua', 2); --nao esta boa
+select * from alimenta√ß√£o;
+select sum(calorias) from alimenta√ß√£o; --comer do dia
+call comer('√°gua', 2); --nao esta boa
 select * from perfil;*/
