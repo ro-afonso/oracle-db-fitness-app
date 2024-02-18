@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F8EE77AE-0D46-AB78-1EBF-2B5734BA1233" name="Alimentação">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-01 22:47:17 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Alimento" id="EE743418-79D3-DE9C-3322-CAF3C50C4E71">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-01 22:49:57 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Calorias" id="A1DECF5C-3FA8-C506-3C3D-9E7002ECE188">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-01 22:56:25 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="64ED10A0-CE5F-739C-615F-21E891A8B00D" name="Alimentação PK">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-01 23:26:05 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EE743418-79D3-DE9C-3322-CAF3C50C4E71</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

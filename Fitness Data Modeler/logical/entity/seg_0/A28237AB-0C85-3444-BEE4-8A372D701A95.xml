@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A28237AB-0C85-3444-BEE4-8A372D701A95" name="Pagamentos">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-13 21:28:08 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Data de pagamento" id="EA8A564B-C89C-47DE-6C2B-109DCD8AA45C">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-13 22:43:18 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Valor" id="3A172A7A-64DB-7209-CC4B-A47B7F448A9A">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-13 22:43:52 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="F00C0AB9-66CE-F8E6-A391-C77BFD58E71F">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-19 08:01:14 UTC</createdTime>
+<generatorID>3699A6AB-4DCA-B45C-1A19-2BA70BBDF89D</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<referedAttribute>C811E56C-A00D-304A-02DC-1619C1A25FC8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6E6A9562-78F6-D6C4-30D5-AEEBC5692625" name="Pagamentos PK">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-13 22:43:54 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EA8A564B-C89C-47DE-6C2B-109DCD8AA45C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="03EFDD7C-2D3C-1ABE-8F39-C6E5A8294FDF" name="Valores_dia">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>FE2385D1-6C38-A13D-79E5-31F96E3BBC7A</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Data" id="717ED6CD-6751-86CF-463C-1F8314480235">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>6B554C6D-217A-F223-2430-921A1D2546FE</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nr_Passos" id="E8F9549B-5169-E146-661B-CAD55B84DB95">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>102F2275-DDB6-14CF-4517-F10A6001B5D0</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Distância_percorrida" id="6262B919-0670-47A0-C746-D8A8B30F2709">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>F25E47C9-C1C9-F532-28E8-4886D9C3D9D5</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Calorias_perdidas" id="D6A3BEEF-173B-A242-1719-2BEC17A2549A">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>1028F610-ADB6-A80E-5FB2-716EB0417DE6</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Utilizador_id" id="45573BD1-8FF6-1CB8-027D-557D0511C66D">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>D23E8BF3-F613-9752-B924-845B00165C00</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="18530EB4-C65C-D400-6369-0A0069E96E04" referredColumn="57953175-FB8D-EB81-23C1-897E080888FF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ABD8492D-DD3D-8548-EA1C-9573D7F3EA70" name="Valores_dia_Utilizador_FK">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>2BEA92E4-7437-4D16-00CD-801882B94135</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="45573BD1-8FF6-1CB8-027D-557D0511C66D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

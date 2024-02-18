@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F2EB0783-430F-0F1C-A57F-531C1352D990" name="Alimentação">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>F8EE77AE-0D46-AB78-1EBF-2B5734BA1233</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Alimento" id="2E258830-398D-E815-D198-497B0927E847">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>EE743418-79D3-DE9C-3322-CAF3C50C4E71</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Calorias" id="A1DA77BC-CA01-539B-2090-6DA31907509B">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>A1DECF5C-3FA8-C506-3C3D-9E7002ECE188</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CE2F9CAD-0B51-40ED-AD09-B41FF98F5B9D" name="Alimentação_PK">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>64ED10A0-CE5F-739C-615F-21E891A8B00D</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E258830-398D-E815-D198-497B0927E847"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

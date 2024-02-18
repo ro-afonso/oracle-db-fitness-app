@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E3B3F345-362A-5511-DE77-F5DB6F0FC475" name="Notificações">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>F995CA89-B95F-AD3E-3459-8B842F5204A2</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_notificação" id="EA42DD5C-2FF8-DCBF-C40A-C79B32208B8D">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>44054797-0331-35ED-16BA-5D899C8EF8DA</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data" id="D972A46E-9F0A-D12F-1DD8-83ED544CE998">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>B53FFFFE-215B-4DD6-C72A-F9204DD2B32D</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ritmo_Cardíaco" id="06AF8F25-52DD-AF5F-BE0F-43C118367D6A">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>64D7652B-78D1-654F-41CD-1828FE4A935F</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Utilizador_id" id="8CA4D016-3075-CAAD-C711-28FBB4242CB4">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>1CCDD498-3AAB-EBC7-7E98-5114FFA97518</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FF733F07-DB5C-570A-9009-B5F45F174B7D" referredColumn="57953175-FB8D-EB81-23C1-897E080888FF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="792081B6-6795-3F81-F4C9-87D31CF4C1D3" name="Notificações_PK">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>92B13659-8C76-84EA-1C29-FC6381B88DF2</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA42DD5C-2FF8-DCBF-C40A-C79B32208B8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FDE2C447-F3B1-FA0A-8202-DE2EF1C4CD9C" name="Notificações_Utilizador_FK">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>9875470B-73F1-D111-3BC9-83177900D2E0</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CA4D016-3075-CAAD-C711-28FBB4242CB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

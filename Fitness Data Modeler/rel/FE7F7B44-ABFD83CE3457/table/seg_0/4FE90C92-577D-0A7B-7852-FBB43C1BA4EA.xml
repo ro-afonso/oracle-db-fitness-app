@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4FE90C92-577D-0A7B-7852-FBB43C1BA4EA" name="Utilizador">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>E44B9AD7-87C9-8F29-6175-A684AD7795A8</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="57953175-FB8D-EB81-23C1-897E080888FF">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>C811E56C-A00D-304A-02DC-1619C1A25FC8</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Primeiro_Nome" id="F5CE9216-2482-B7A8-B72C-EA21A1E55E51">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>70A48FC2-2A55-147F-2DE4-CD3597B2B5FF</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Último_Nome" id="800B444E-2E2F-CA30-41D9-5B631CE9AF4E">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>3506087D-66FB-CC62-B9E2-9B034E4EF62E</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_de_inscrição" id="A7D0105F-73D0-81D5-0D8B-1E5243A7FA52">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>99CE2C81-BFEC-7C39-D68B-A1C8E11A3EBA</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo_de_serviço" id="8EE16998-D68D-7FA9-6116-85A9EF4ED389">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>0EEB3417-1B89-4659-DDF9-5AFAA047DCF0</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ativo" id="A52C1228-32D8-F882-0771-11100D378E3E">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>4DD19134-7EDC-21DB-486D-44FBAA8D2ABF</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9CCD1019-9B8D-25B5-D57B-0F36C19CC96D" name="Utilizador_PK">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>F8361894-5A20-658A-7AC4-60C439CEAAE3</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57953175-FB8D-EB81-23C1-897E080888FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

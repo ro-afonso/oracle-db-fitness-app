@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="025E16FC-4DD8-E526-6180-2B80659CC1E1" name="Objetivos_dia">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>295A359D-DF69-215E-C9B7-F7FC211541A7</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Data" id="4CE67BAB-824B-D4A5-590E-6BD1AA8953AD">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>F0E0742B-3515-4660-C200-391C5BBA1AB5</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Número_de_passos_a_dar" id="5BFD002B-4D30-AEB0-7AA0-FC6A501CC4A1">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>AEA791BE-F9E6-1805-D296-80AB7DF3F143</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Distância_a_percorrer" id="A0B6A530-E0C5-AA1F-4772-6677EEE6DF10">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>D0F1306F-AACB-CB48-3EDA-0922A315F5BE</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Calorias_a_queimar" id="F60E1DD8-59F8-542E-9E07-CC5380F0C129">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>B0D0F1F5-5E60-F645-DF36-78C3203D9F98</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Utilizador_id" id="070FAC13-8E30-D896-C2FA-CDD7C859845B">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>E064F710-5A30-A5A9-7560-1DF8C93ED495</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F1E050B-C58D-3AD8-4E56-CB6BAEDCC979" referredColumn="57953175-FB8D-EB81-23C1-897E080888FF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9F91DE3E-6EB5-2EF8-C1A6-8CA6F50FC071" name="Objetivos_dia_Utilizador_FK">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>CD8E4C80-AA43-19A2-6BF2-A1605CEFB7F2</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="070FAC13-8E30-D896-C2FA-CDD7C859845B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

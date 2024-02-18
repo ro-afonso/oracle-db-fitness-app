@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FE2385D1-6C38-A13D-79E5-31F96E3BBC7A" name="Valores dia">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-13 21:33:54 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Data" id="6B554C6D-217A-F223-2430-921A1D2546FE">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-13 22:45:30 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr Passos" id="102F2275-DDB6-14CF-4517-F10A6001B5D0">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-13 22:45:47 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Distância percorrida" id="F25E47C9-C1C9-F532-28E8-4886D9C3D9D5">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-13 22:46:22 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Calorias perdidas" id="1028F610-ADB6-A80E-5FB2-716EB0417DE6">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-13 22:46:37 UTC</createdTime>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="D23E8BF3-F613-9752-B924-845B00165C00">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-04-19 07:56:51 UTC</createdTime>
+<generatorID>2BEA92E4-7437-4D16-00CD-801882B94135</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<engineerTo>
+<item key="FE7F7B44-785B-E1ED-C33B-ABFD83CE3457" value="true"/>
+</engineerTo>
+<referedAttribute>C811E56C-A00D-304A-02DC-1619C1A25FC8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

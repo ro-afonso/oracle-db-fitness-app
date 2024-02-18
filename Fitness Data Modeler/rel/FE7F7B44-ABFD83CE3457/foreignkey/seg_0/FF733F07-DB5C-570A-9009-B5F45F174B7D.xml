@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FF733F07-DB5C-570A-9009-B5F45F174B7D" containerWithKeyObject="E3B3F345-362A-5511-DE77-F5DB6F0FC475" localFKIndex="FDE2C447-F3B1-FA0A-8202-DE2EF1C4CD9C" name="Notificações_Utilizador_FK">
+<createdBy>Utilizador</createdBy>
+<createdTime>2021-05-02 10:55:32 UTC</createdTime>
+<generatorID>9875470B-73F1-D111-3BC9-83177900D2E0</generatorID>
+<ownerDesignName>Fitness Data Modeler</ownerDesignName>
+<referredTableLongName>Utilizador</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4FE90C92-577D-0A7B-7852-FBB43C1BA4EA</referredTableID>
+<keyObject>9CCD1019-9B8D-25B5-D57B-0F36C19CC96D</keyObject>
+<referredKeyID>9CCD1019-9B8D-25B5-D57B-0F36C19CC96D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
